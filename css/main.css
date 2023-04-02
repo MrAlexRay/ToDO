@@ -1,0 +1,81 @@
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  background-color: #E4E5E7;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+.task-title {
+  
+  padding-top: 5px;
+}
+.gray {
+  color: #BDBDBD;
+}
+.task-title--done {
+  text-decoration: line-through;
+  color: #CDCDCD;
+}
+.task-item__buttons {
+  display: flex;
+  column-gap: 5px; /*задает размер промежутка ( желоба ) между столбцами элемента*/
+}
+.notify-holder {
+  height: 60px;
+  margin-bottom: 20px;
+}
+.empty-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.empty-list__title {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+.empty-list__icon {
+  color: #42BE2A;
+  font-size: 32px;
+}
+.btn-action {
+    background-color: #e0e5ea;
+    padding: 8px 10px;
+    border: 0;
+    border-radius: 4px;
+    transition: opacity 0.2s ease-in;
+    opacity: 0.5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; /*значение для всех прямых дочерних элементов как группы. Во Flexbox он управляет выравниванием элементов по поперечной оси*/
+}
+
+.btn-action:hover {
+    background-color: #e0e5ea; /*Подсветка кнопки при наводке*/
+    opacity: 1; /*принимает значения от 0 до 1 - 1- это полная видимость без нее не подсвечивает*/
+}
+
+.btn-action img {
+   pointer-events: none; /*чтобы кнопки удаления не тригерились об картинку а проходили как бы сквозь то есть в button (снимаем все события) */
+}  /*Выражаясь проще: чтобы картинка не была */
+
+
+/* 41 строчка кода для скрытия блока список дел пуст */
+.none {
+  display: none;
+}
+
+.float-right {
+  float: right;
+}
