@@ -2,12 +2,12 @@ function createToDoList() {
   let container = document.querySelector(".container");
   //Создаю див тудусписок-1
   let divContainerZadanieFirst = document.createElement("div");
-  divContainerZadanieFirst.textContent = "ToDoSpisok-1";
+  divContainerZadanieFirst.textContent = "ToDoSpisok-2";
   divContainerZadanieFirst.setAttribute("class", "display-4 mb-2");
   container.append(divContainerZadanieFirst);
   //Создаю див Список задач для мамы
   let h4_mb_5 = document.createElement("div");
-  h4_mb_5.textContent = "Мои задания";
+  h4_mb_5.textContent = "Задания мамы";
   h4_mb_5.setAttribute("class", "h4 mb-5");
   container.append(h4_mb_5);
   //создаю див (лист заданий)
@@ -136,8 +136,8 @@ let tasks_two = [];
 
 //проверка есть ли в localstorage данные
 //он вернет строчку или нулл
-if (localStorage.getItem("tasks")) {
-  tasks = JSON.parse(localStorage.getItem("tasks")); //если есть что-то парсим в масив
+if (localStorage.getItem("tasksMother")) {
+  tasks = JSON.parse(localStorage.getItem("tasksMother")); //если есть что-то парсим в масив
 }
 
 //РРрРрРрР
@@ -291,7 +291,7 @@ function doneTask(event) {
 
 function saveToLocalStorage() {
   //Сохранение в LocalStorage
-  localStorage.setItem("tasks", JSON.stringify(tasks)); // "tasks это наш ключ" 2 -аргумент - и мы хотим записать массив или объект его необходимо трансформировать в JSON.stringify(tasks)
+  localStorage.setItem("tasksMother", JSON.stringify(tasks)); // "tasks это наш ключ" 2 -аргумент - и мы хотим записать массив или объект его необходимо трансформировать в JSON.stringify(tasks)
   //он сначала преобразуется в JSON а потом сохраняется
 }
 
